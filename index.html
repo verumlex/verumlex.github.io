@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VERUMLEX TECHNOLOGIES | Auditoría Forense, Tecnología y Automatización con IA</title>
+    <title>VERUMLEX TECHNOLOGIES | Ingeniería Forense y Blindaje Jurídico</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a2540'/%3E%3Ctext x='16' y='22' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif' font-size='14' font-weight='800' fill='%23ffffff' text-anchor='middle'%3EVT%3C/text%3E%3C/svg%3E">
     <style>
         :root {
@@ -13,6 +13,7 @@
             --surface: #ffffff;
             --text: #475569;
             --border: #e2e8f0;
+            --accent: #0a2540;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -79,8 +80,8 @@
             .main-content { flex: 1.2; }
             .image-showcase { flex: 0.8; }
         }
-        h1 { font-size: 34px; font-weight: 800; line-height: 1.3; margin: 0 0 15px 0; color: var(--primary); }
-        .hero-text-p { color: var(--text); font-size: 18px; text-align: justify; margin: 0; line-height: 1.6; }
+        h1 { font-size: 32px; font-weight: 800; line-height: 1.3; margin: 0 0 15px 0; color: var(--primary); }
+        .hero-text-p { color: var(--text); font-size: 17px; text-align: justify; margin: 0; line-height: 1.6; }
 
         /* CUADRO DERECHO */
         .image-showcase {
@@ -94,7 +95,7 @@
             border-radius: 24px;
             box-shadow: 0 20px 40px -15px rgba(10,37,64,0.15);
             border: 1px solid var(--border);
-            min-height: 300px;
+            min-height: 380px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -117,6 +118,61 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
+        /* PREGUNTAS DE CONTROL */
+        .questions-block {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px -3px rgba(10,37,64,0.03);
+        }
+        .questions-block h3 {
+            font-size: 22px;
+            color: var(--primary);
+            margin: 0 0 25px 0;
+            font-weight: 800;
+        }
+        .questions-block ol {
+            padding-left: 20px;
+            margin: 0 0 25px 0;
+            counter-reset: item;
+            list-style: none;
+        }
+        .questions-block ol li {
+            font-size: 16px;
+            color: var(--text);
+            margin-bottom: 15px;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 35px;
+            counter-increment: item;
+        }
+        .questions-block ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--primary);
+            color: #ffffff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+        }
+        .questions-block .questions-closing {
+            font-size: 16px;
+            color: var(--primary);
+            font-weight: 700;
+            margin: 0;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
         .trust-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 15px; margin-top: 25px; }
         .trust-item h3 { margin: 0; color: var(--primary); font-size: 18px; font-weight: 800; }
         .trust-item p { margin: 2px 0 0 0; font-size: 10px; color: var(--secondary); font-weight: 700; }
@@ -126,33 +182,120 @@
         p.riel-text { font-size: 15.5px; color: var(--text); margin-bottom: 0; text-align: justify; }
         .badge { display: inline-block; background-color: var(--bg); color: var(--primary); padding: 4px 12px; border-radius: 30px; font-size: 10px; font-weight: 800; margin-bottom: 15px; border: 1px solid var(--border); }
 
+        /* SECCIÓN DE DOLOR */
+        .pain-block {
+            background: #fef3c7;
+            border-left: 4px solid #d97706;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0 20px 0;
+        }
+        .pain-block strong {
+            color: #92400e;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .pain-block p {
+            font-size: 14.5px;
+            color: #78350f;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* SECCIÓN DE AUTORIDAD */
+        .authority-block {
+            background: var(--surface);
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            padding: 45px 40px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .authority-block::before {
+            content: "AUTORIDAD";
+            position: absolute;
+            top: -12px;
+            left: 40px;
+            background: var(--primary);
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+        .authority-block h2 {
+            font-size: 24px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+        .authority-block p {
+            font-size: 16px;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .authority-block p:last-child {
+            margin-bottom: 0;
+        }
+        .authority-signature {
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
         /* CTA */
         .cta-block {
             background: var(--primary);
             color: var(--surface);
             border-radius: 20px;
-            padding: 40px 35px;
+            padding: 50px 40px;
             margin-top: 25px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             text-align: center;
             box-shadow: 0 12px 30px -10px rgba(10,37,64,0.25);
         }
         .cta-block h2 {
             color: var(--surface);
-            font-size: 22px;
-            margin-bottom: 12px;
+            font-size: 24px;
+            margin-bottom: 15px;
+            line-height: 1.3;
         }
         .cta-block p {
-            color: rgba(255,255,255,0.85);
-            font-size: 15.5px;
-            margin: 0 auto 25px auto;
-            max-width: 600px;
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+            margin: 0 auto 20px auto;
+            max-width: 720px;
+            line-height: 1.6;
+        }
+        .cta-nda {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin: 25px auto;
+            max-width: 720px;
+            text-align: left;
+        }
+        .cta-nda p {
+            font-size: 14px !important;
+            color: rgba(255,255,255,0.95) !important;
+            margin: 0 !important;
+            max-width: none !important;
         }
         .cta-btn {
             display: inline-block;
             background: var(--surface);
             color: var(--primary);
-            padding: 14px 32px;
+            padding: 16px 40px;
             border-radius: 30px;
             font-size: 14px;
             font-weight: 800;
@@ -161,10 +304,42 @@
             text-transform: uppercase;
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-top: 10px;
         }
         .cta-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        /* FAQ */
+        .faq-block {
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+        .faq-block h2 {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px 30px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(10,37,64,0.02);
+        }
+        .faq-item h3 {
+            font-size: 16px;
+            color: var(--primary);
+            margin: 0 0 12px 0;
+            font-weight: 800;
+        }
+        .faq-item p {
+            font-size: 15px;
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+            text-align: justify;
         }
 
         footer { margin-top: 60px; border-top: 1px solid var(--border); padding-top: 25px; font-size: 12px; color: var(--text); text-align: center; }
@@ -179,7 +354,7 @@
                 <img src="logo.png" alt="VERUMLEX">
             </div>
             <div class="lang-switcher">
-                <button id="b-es" class="lang-btn active" onclick="tl('es')">ES</button>
+                <button id="b-es" class="lang-btn active" onclick="withEs()">ES</button>
                 <button id="b-en" class="lang-btn" onclick="withEn()">EN</button>
                 <button id="b-pt" class="lang-btn" onclick="withPt()">PT</button>
             </div>
@@ -188,61 +363,123 @@
         <!-- HERO -->
         <div class="hero-layout">
             <div class="main-content">
-                <h1 id="h-title">Auditoría Forense, Riesgo Operacional, Gobernanza de Datos, LegalTech y Automatización con IA</h1>
-                <p id="h-desc" class="hero-text-p">VERUMLEX TECHNOLOGIES integra análisis de datos avanzado, cumplimiento normativo nacional e internacional, ingeniería profunda en infraestructura de tecnología y telecomunicaciones, y automatización con IA para operaciones reguladas. Proveemos soluciones corporativas B2B transnacionales mediante procesamiento local estrictamente offline y protegido.</p>
+                <h1 id="h-title">Ingeniería Forense y Blindaje Jurídico para organizaciones con operaciones complejas. Sin que sus datos dependan jamás de la nube.</h1>
+                <p id="h-desc" class="hero-text-p">Saneamos bases de datos masivas, auditamos desvíos operativos y blindamos la ejecución de acuerdos contractuales críticos. Procesamiento avanzado 100% offline mediante modelos locales de IA y pipelines automatizados, diseñado para corporaciones que exigen control absoluto, mitigación de riesgos y confidencialidad total.</p>
                 <div class="trust-bar">
-                    <div class="trust-item"><h3>100%</h3><p id="m1">PROCESAMIENTO OFFLINE</p></div>
-                    <div class="trust-item"><h3>ZERO</h3><p id="m2">RIESGO DE FUGA</p></div>
-                    <div class="trust-item"><h3>SLA</h3><p id="m3">AUDITORÍA DE RED</p></div>
+                    <div class="trust-item"><h3>100%</h3><p id="m1">OFFLINE</p></div>
+                    <div class="trust-item"><h3>0</h3><p id="m2">PUNTOS DE EXPOSICIÓN</p></div>
+                    <div class="trust-item"><h3>SLA</h3><p id="m3">AUDITORÍA CONTRACTUAL</p></div>
                 </div>
             </div>
             <div class="image-showcase">
-                <div class="image-text-overlay" id="h-ov">CORE INFRASTRUCTURE: LA FUSIÓN LOGÍSTICA DE DATOS, LEYES Y REDES</div>
+                <div class="image-text-overlay" id="h-ov">PROCESAMIENTO LOCAL. CADENA DE CUSTODIA. GARANTÍA LEGAL.</div>
             </div>
+        </div>
+
+        <!-- 3 PREGUNTAS DE CONTROL -->
+        <div class="questions-block">
+            <h3 id="q-title">Tres preguntas críticas que toda junta directiva debería poder responder con total seguridad:</h3>
+            <ol>
+                <li id="q1">¿Cuánto dinero perdió su organización el último año por incumplimientos de proveedores críticos que nadie auditó técnicamente?</li>
+                <li id="q2">¿Tiene la certeza absoluta de que sus bases de datos maestras no contienen errores masivos que distorsionen sus estados financieros o fiscales?</li>
+                <li id="q3">¿Podría demostrar ante un tribunal o regulador externo la cadena de custodia íntegra de sus datos transaccionales?</li>
+            </ol>
+            <p class="questions-closing" id="q-close">Si no puede responder con datos exactos, su empresa tiene una brecha operativa y legal activa.</p>
         </div>
 
         <div class="section-title" id="s-head">Unidades de Ingeniería Corporativa</div>
-        <div class="riel-grid">
-            <!-- RIEL 1 -->
-            <div class="riel">
-                <div class="badge" id="b1">RIEL 1 — DATA OPERATIONS</div>
-                <h2 id="t1">📊 PMO Tech & Control de Gestión</h2>
-                <p class="riel-text" id="p1">Diseño, estructuración y control automatizado de portafolios tecnológicos mediante modelos analíticos locales en Power BI Desktop. Despacho e integración analítica de arquitectura de datos corporativos a través de entregables estricta y limpiamente estructurados en formato .pbix.</p>
+
+        <!-- RIEL 1 -->
+        <div class="riel">
+            <div class="badge" id="b1">RIEL 1 — DATA OPERATIONS</div>
+            <h2 id="t1">PMO Tech, Control de Gestión y Gobernanza Corporativa</h2>
+            <div class="pain-block">
+                <strong>El Costo de no hacer nada</strong>
+                <p id="p1-pain">Portafolios de proyectos ciegos, reportes manuales en Excel que llegan tarde o con errores, y un directorio tomando decisiones basadas en la intuición de sus gerentes, no en datos reales.</p>
             </div>
-            <!-- RIEL 2 -->
-            <div class="riel">
-                <div class="badge" id="b2">RIEL 2 — INFRAESTRUCTURA FORENSE</div>
-                <h2 id="t2">🧬 Saneamiento Analítico & Pipelines ETL</h2>
-                <p class="riel-text" id="p2">Minería, depuración forense y desduplicación masiva de bases de datos comerciales e inventarios corruptos. Procesamiento local optimizado mediante algoritmos de fragmentación síncrona en entornos aislados, garantizando la preservación absoluta de la cadena de custodia de la información.</p>
-            </div>
-            <!-- RIEL 3 -->
-            <div class="riel">
-                <div class="badge" id="b3">RIEL 3 — AUDITORÍA DE SLAs Y RECUPERACIÓN DE CAPITAL</div>
-                <h2 id="t3">📡 Auditoría de SLAs & Recuperación de Capital</h2>
-                <p class="riel-text" id="p3">Análisis matemático y minería forense aplicada a registros crudos de incidencias y fallas de red inalámbricas y de fibra óptica. Procesamiento y correlación algorítmica de métricas estructurales TTG (Time to Grant), TTC (Time to Clear) y TTL (Time to Log) para la detección de desvíos operativos y la ejecución penal de Acuerdos de Nivel de Servicio ante operadores transnacionales.</p>
-            </div>
-            <!-- RIEL 4 -->
-            <div class="riel">
-                <div class="badge" id="b4">RIEL 4 — REGULACIÓN & CUMPLIMIENTO</div>
-                <h2 id="t4">⚖️ Blindaje Contractual y LegalTech</h2>
-                <p class="riel-text" id="p4">Auditoría técnica avanzada y estructuración de marcos contractuales aplicada a procesos de procura corporativa transnacional. Mitigación de riesgos operacionales y aseguramiento de cumplimiento regulatorio nacional e internacional para la adquisición, gobernanza y despliegue de infraestructura crítica.</p>
-            </div>
+            <p class="riel-text" id="p1-sol">Diseñamos y estructuramos sistemas de control automatizados mediante modelos analíticos locales en Power BI Desktop. Entregamos tableros consolidados en formato ejecutable .pbix listos para la toma de decisiones en el directorio. Control total y confidencial, procesado internamente sin exponer su estrategia en la red.</p>
         </div>
 
-        <!-- CTA -->
+        <!-- RIEL 2 -->
+        <div class="riel">
+            <div class="badge" id="b2">RIEL 2 — INFRAESTRUCTURA FORENSE</div>
+            <h2 id="t2">Saneamiento Analítico de Datos y Pipelines ETL Forenses</h2>
+            <div class="pain-block">
+                <strong>El Costo de no hacer nada</strong>
+                <p id="p2-pain">Bases de datos de clientes, inventarios o activos corruptas y registros duplicados que inflan artificialmente las cuentas. Datos deficientes que no sirven como prueba legal válida ante una auditoría fiscal o un litigio porque no preservan su integridad.</p>
+            </div>
+            <p class="riel-text" id="p2-sol">Minería y depuración forense masiva ejecutada mediante algoritmos en Python y motores de Fuzzy Matching con un 96.97% de confianza lógica. Reestructuramos la información en entornos aislados, garantizando la preservación absoluta de la cadena de custodia procesal.</p>
+        </div>
+
+        <!-- RIEL 3 -->
+        <div class="riel">
+            <div class="badge" id="b3">RIEL 3 — AUDITORÍA DE SLAs Y RECUPERACIÓN DE CAPITAL</div>
+            <h2 id="t3">Minería Forense de Incidencias y Ejecución de Cláusulas Contractuales</h2>
+            <div class="pain-block">
+                <strong>El Costo de no hacer nada</strong>
+                <p id="p3-pain">Contratos con proveedores logísticos, de software o de infraestructura que incluyen penalizaciones por fallas de servicio (SLAs) que nunca se ejecutan. Pérdidas millonarias silenciosas porque nadie audita de forma matemática las métricas que entrega el proveedor.</p>
+            </div>
+            <p class="riel-text" id="p3-sol">Analizamos matemáticamente sus registros crudos de incidencias, bases de datos transaccionales y logs de sistemas. Correlacionamos métricas estructurales clave (TTG, TTC, TTL) con las cláusulas contractuales. Demostramos técnicamente el incumplimiento, cuantificamos el impacto financiero exacto y estructuramos la acción legal para recuperar el capital. Este mismo método fue aplicado por nuestro fundador para posicionar el rendimiento operativo de redes de telecomunicaciones en los primeros lugares nacionales.</p>
+        </div>
+
+        <!-- RIEL 4 -->
+        <div class="riel">
+            <div class="badge" id="b4">RIEL 4 — REGULACIÓN Y CUMPLIMIENTO</div>
+            <h2 id="t4">Blindaje Contractual Avanzado y LegalTech Aplicado</h2>
+            <div class="pain-block">
+                <strong>El Costo de no hacer nada</strong>
+                <p id="p4-pain">Firmar contratos de adquisición tecnológica o infraestructura crítica confiando a ciegas en la palabra del proveedor. Vacíos en la letra pequeña técnica que exponen a la empresa a multas regulatorias o parálisis operativas catastróficas cuando surge un conflicto.</p>
+            </div>
+            <p class="riel-text" id="p4-sol">Auditoría técnica avanzada aplicada al diseño de contratos de procura corporativa nacional e internacional. Aseguramos el cumplimiento normativo blindando la documentación jurídica desde la raíz, porque entendemos a la perfección el código del software y la ingeniería del hardware que su organización está adquiriendo.</p>
+        </div>
+
+        <!-- AUTORIDAD -->
+        <div class="authority-block">
+            <h2 id="a-title">35 años uniendo la lógica de los datos y el rigor de la ley.</h2>
+            <p id="a-p1">En el mercado corporativo actual, los ingenieros despliegan arquitecturas de datos pero ignoran los riesgos regulatorios. Los abogados, por su parte, redactan contratos de tecnología pero no saben leer una sola línea de código. VERUMLEX rompe esa brecha.</p>
+            <p id="a-p2">La firma está fundada y operada directamente por Simón Molleda Yoris, un perfil atípico en América Latina con más de tres décadas de experiencia en la ingeniería de operaciones críticas, ciberseguridad en redes redundantes de fibra óptica y analítica de datos (desde 1990), consolidado formalmente como Abogado de la República (desde 2016).</p>
+            <p id="a-p3">Esta combinación exacta permite el desarrollo de scripts automatizados en Python y procesamiento de lenguaje natural (NLP) que han reducido hasta en un 70% el tiempo de análisis de expedientes legales complejos en proyectos previos, o auditar infraestructuras para erradicar brechas lógicas. No subcontratamos firmas externas ni delegamos el criterio; un solo operador domina la ingeniería y el derecho de punta a punta.</p>
+            <div class="authority-signature" id="a-sig">Simón Molleda Yoris — Fundador y Socio Director</div>
+        </div>
+
+        <!-- CTA DIAGNÓSTICO -->
         <div class="cta-block">
-            <h2 id="cta-title">Solicite un diagnóstico inicial</h2>
-            <p id="cta-desc">Analizamos su caso, evaluamos el alcance y le proponemos una hoja de ruta técnica. Sin compromiso.</p>
-            <a href="mailto:corp&#64;verumlex.org?subject=Solicitud%20de%20diagn%C3%B3stico%20inicial" class="cta-btn" id="cta-btn">Solicitar diagnóstico</a>
+            <h2 id="cta-title">Diagnóstico Técnico-Legal Inicial</h2>
+            <p id="cta-desc">El diagnóstico inicial se ofrece sin costo porque es nuestra forma de calificar el encaje mutuo. No trabajamos con cualquier cliente. Evaluamos si existe una brecha real, y el cliente evalúa si nuestro enfoque encaja con su operación. Si hay encaje, presentamos propuesta. Si no, se lo decimos con claridad.</p>
+            <div class="cta-nda">
+                <p id="cta-nda-text">🔒 <strong>Con NDA Firmado Previamente:</strong> Este diagnóstico se realiza estrictamente bajo un entorno blindado de secreto profesional. Firmamos y formalizamos un Acuerdo de Confidencialidad (NDA) vinculante antes de que usted comparta una sola línea de registros, contratos o sistemas.</p>
+            </div>
+            <a href="mailto:corp&#64;verumlex.org?subject=Solicitud%20de%20Diagn%C3%B3stico%20T%C3%A9cnico-Legal%20Inicial%20con%20NDA" class="cta-btn" id="cta-btn">Solicitar Diagnóstico Inicial</a>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-block">
+            <div class="section-title" id="faq-title">Preguntas Frecuentes</div>
+            <div class="faq-item">
+                <h3 id="faq-q1">¿Qué es exactamente lo que hace única a VERUMLEX?</h3>
+                <p id="faq-a1">Resolvemos problemas complejos atacándolos desde dos frentes simultáneos. Si su empresa tiene una fuga de dinero, una consultora de software solo detectará la falla técnica. Nosotros corregimos el error en los sistemas y, al mismo tiempo, estructuramos la reclamación legal basada en el contrato para obligar al proveedor a resarcir el daño o indemnizar a la organización.</p>
+            </div>
+            <div class="faq-item">
+                <h3 id="faq-q2">¿Cómo garantizan el procesamiento 100% offline de la IA?</h3>
+                <p id="faq-a2">No dependemos de nubes comerciales ni enviamos información a APIs externas. Todo nuestro entorno analítico —incluyendo modelos de lenguaje avanzados (LLMs), bases de datos vectoriales y pipelines de Python— se ejecuta en infraestructura propia estrictamente aislada (air-gapped), sin conexión a internet. Su información se analiza bajo protocolos estrictos de custodia analítica y secrecía profesional, eliminando cualquier vector de transferencia o exposición en la red.</p>
+            </div>
+            <div class="faq-item">
+                <h3 id="faq-q3">¿Por qué el diagnóstico inicial es sin costo?</h3>
+                <p id="faq-a3">El diagnóstico se ofrece sin costo porque es nuestra forma de calificar el encaje mutuo. No trabajamos con cualquier cliente. Evaluamos si existe una brecha real, y el cliente evalúa si nuestro enfoque encaja con su operación. Si hay encaje, presentamos propuesta. Si no, se lo decimos con claridad.</p>
+            </div>
+            <div class="faq-item">
+                <h3 id="faq-q4">¿Cómo es el esquema de contratación?</h3>
+                <p id="faq-a4">Trabajamos exclusivamente por hitos entregados o proyectos cerrados bajo presupuesto transparente. Sin mensualidades obligatorias ni dependencias operativas. Todo el valor generado (código, tableros analíticos y estructuras contractuales) pasa a ser propiedad absoluta de su empresa.</p>
+            </div>
         </div>
 
         <!-- CONTACTO -->
-        <div class="section-title" id="c-title">Canales de Comunicación Segura</div>
+        <div class="section-title" id="c-title" style="margin-top: 60px;">Canales de Comunicación</div>
         <div class="riel" style="background: var(--surface); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; align-items: center;">
             <div>
                 <div class="badge" style="background-color: var(--primary); color: var(--surface);" id="c-b1">CANAL GENERAL</div>
                 <h2 style="margin-bottom: 10px;" id="c-t1">📩 Operaciones B2B</h2>
-                <p class="riel-text" style="font-size: 14.5px;" id="c-p1">Para solicitudes de diagnóstico analítico, auditorías de red o saneamiento forense de datos por lotes.</p>
+                <p class="riel-text" style="font-size: 14.5px;" id="c-p1">Para solicitudes de diagnóstico, auditorías o consultas generales.</p>
                 <div style="margin-top: 15px; font-weight: 800; font-size: 14px; letter-spacing: 0.5px;">
                     <a href="mailto:corp&#64;verumlex.org" style="color: var(--secondary); text-decoration: none; user-select: all;">corp&#64;verumlex.org</a>
                 </div>
@@ -250,7 +487,7 @@
             <div style="border-left: 1px solid var(--border); padding-left: 25px;">
                 <div class="badge" id="c-b2">ENLACE EJECUTIVO</div>
                 <h2 style="margin-bottom: 10px;" id="c-t2">💼 Enlace Ejecutivo</h2>
-                <p class="riel-text" style="font-size: 14.5px;" id="c-p2">Contacto directo y confidencial para la gobernanza de portafolios tecnológicos y acuerdos de nivel de servicio (SLA).</p>
+                <p class="riel-text" style="font-size: 14.5px;" id="c-p2">Contacto directo y confidencial para proyectos estratégicos y evaluación técnica inicial.</p>
                 <div style="margin-top: 15px; font-weight: 800; font-size: 14px; letter-spacing: 0.5px;">
                     <a href="mailto:simon.molleda&#64;verumlex.org" style="color: var(--primary); text-decoration: none; user-select: all;">simon.molleda&#64;verumlex.org</a>
                 </div>
@@ -259,9 +496,9 @@
 
         <footer>
             <div class="footer-brand">&copy; 2026 VERUMLEX TECHNOLOGIES. All rights reserved.</div>
-            <div id="f-legal">Jurisdicción de Infraestructura de Datos Protegida</div>
+            <div id="f-legal">Ingeniería Forense y Blindaje Jurídico</div>
             <div style="margin-top: 15px; font-size: 11px; color: var(--secondary); font-weight: 700; letter-spacing: 1px;">
-                CENTRAL OPERATIONS: CORP@VERUMLEX.ORG | SECURE ENCRYPTED CHANNELS ONLY
+                CENTRAL OPERATIONS: CORP@VERUMLEX.ORG
             </div>
         </footer>
     </div>
@@ -274,65 +511,182 @@
             document.getElementById(id).classList.add('active');
         }
 
-        function tl(lang) {
+        function withEs() {
             resetActive('b-es');
-            document.getElementById('h-title').innerText = "Auditoría Forense, Riesgo Operacional, Gobernanza de Datos, LegalTech y Automatización con IA";
-            document.getElementById('h-desc').innerText = "VERUMLEX TECHNOLOGIES integra análisis de datos avanzado, cumplimiento normativo nacional e internacional, ingeniería profunda en infraestructura de tecnología y telecomunicaciones, y automatización con IA para operaciones reguladas. Proveemos soluciones corporativas B2B transnacionales mediante procesamiento local estrictamente offline y protegido.";
-            document.getElementById('m1').innerText = "PROCESAMIENTO OFFLINE"; document.getElementById('m2').innerText = "RIESGO DE FUGA"; document.getElementById('m3').innerText = "AUDITORÍA DE RED";
-            document.getElementById('h-ov').innerText = "CORE INFRASTRUCTURE: LA FUSIÓN LOGÍSTICA DE DATOS, LEYES Y REDES";
+            document.getElementById('h-title').innerText = "Ingeniería Forense y Blindaje Jurídico para organizaciones con operaciones complejas. Sin que sus datos dependan jamás de la nube.";
+            document.getElementById('h-desc').innerText = "Saneamos bases de datos masivas, auditamos desvíos operativos y blindamos la ejecución de acuerdos contractuales críticos. Procesamiento avanzado 100% offline mediante modelos locales de IA y pipelines automatizados, diseñado para corporaciones que exigen control absoluto, mitigación de riesgos y confidencialidad total.";
+            document.getElementById('m1').innerText = "OFFLINE";
+            document.getElementById('m2').innerText = "PUNTOS DE EXPOSICIÓN";
+            document.getElementById('m3').innerText = "AUDITORÍA CONTRACTUAL";
+            document.getElementById('h-ov').innerText = "PROCESAMIENTO LOCAL. CADENA DE CUSTODIA. GARANTÍA LEGAL.";
+            document.getElementById('q-title').innerText = "Tres preguntas críticas que toda junta directiva debería poder responder con total seguridad:";
+            document.getElementById('q1').innerText = "¿Cuánto dinero perdió su organización el último año por incumplimientos de proveedores críticos que nadie auditó técnicamente?";
+            document.getElementById('q2').innerText = "¿Tiene la certeza absoluta de que sus bases de datos maestras no contienen errores masivos que distorsionen sus estados financieros o fiscales?";
+            document.getElementById('q3').innerText = "¿Podría demostrar ante un tribunal o regulador externo la cadena de custodia íntegra de sus datos transaccionales?";
+            document.getElementById('q-close').innerText = "Si no puede responder con datos exactos, su empresa tiene una brecha operativa y legal activa.";
             document.getElementById('s-head').innerText = "Unidades de Ingeniería Corporativa";
-            document.getElementById('b1').innerText = "RIEL 1 — DATA OPERATIONS"; document.getElementById('t1').innerText = "📊 PMO Tech & Control de Gestión"; document.getElementById('p1').innerText = "Diseño, estructuración y control automatizado de portafolios tecnológicos mediante modelos analíticos locales en Power BI Desktop. Despacho e integración analítica de arquitectura de datos corporativos a través de entregables estricta y limpiamente estructurados en formato .pbix.";
-            document.getElementById('b2').innerText = "RIEL 2 — INFRAESTRUCTURA FORENSE"; document.getElementById('t2').innerText = "🧬 Saneamiento Analítico & Pipelines ETL"; document.getElementById('p2').innerText = "Minería, depuración forense y desduplicación masiva de bases de datos comerciales e inventarios corruptos. Procesamiento local optimizado mediante algoritmos de fragmentación síncrona en entornos aislados, garantizando la preservación absoluta de la cadena de custodia de la información.";
-            document.getElementById('b3').innerText = "RIEL 3 — AUDITORÍA DE SLAs Y RECUPERACIÓN DE CAPITAL"; document.getElementById('t3').innerText = "📡 Auditoría de SLAs & Recuperación de Capital"; document.getElementById('p3').innerText = "Análisis matemático y minería forense aplicada a registros crudos de incidencias y fallas de red inalámbricas y de fibra óptica. Procesamiento y correlación algorítmica de métricas estructurales TTG (Time to Grant), TTC (Time to Clear) y TTL (Time to Log) para la detección de desvíos operativos y la ejecución penal de Acuerdos de Nivel de Servicio ante operadores transnacionales.";
-            document.getElementById('b4').innerText = "RIEL 4 — REGULACIÓN & CUMPLIMIENTO"; document.getElementById('t4').innerText = "⚖️ Blindaje Contractual y LegalTech"; document.getElementById('p4').innerText = "Auditoría técnica avanzada y estructuración de marcos contractuales aplicada a procesos de procura corporativa transnacional. Mitigación de riesgos operacionales y aseguramiento de cumplimiento regulatorio nacional e internacional para la adquisición, gobernanza y despliegue de infraestructura crítica.";
-            document.getElementById('cta-title').innerText = "Solicite un diagnóstico inicial";
-            document.getElementById('cta-desc').innerText = "Analizamos su caso, evaluamos el alcance y le proponemos una hoja de ruta técnica. Sin compromiso.";
-            document.getElementById('cta-btn').innerText = "Solicitar diagnóstico";
-            document.getElementById('c-title').innerText = "Canales de Comunicación Segura";
-            document.getElementById('c-b1').innerText = "CANAL GENERAL"; document.getElementById('c-t1').innerText = "📩 Operaciones B2B"; document.getElementById('c-p1').innerText = "Para solicitudes de diagnóstico analítico, auditorías de red o saneamiento forense de datos por lotes.";
-            document.getElementById('c-b2').innerText = "ENLACE EJECUTIVO"; document.getElementById('c-t2').innerText = "💼 Enlace Ejecutivo"; document.getElementById('c-p2').innerText = "Contacto directo y confidencial para la gobernanza de portafolios tecnológicos y acuerdos de nivel de servicio (SLA).";
-            document.getElementById('f-legal').innerText = "Jurisdicción de Infraestructura de Datos Protegida";
+            document.getElementById('b1').innerText = "RIEL 1 — DATA OPERATIONS";
+            document.getElementById('t1').innerText = "PMO Tech, Control de Gestión y Gobernanza Corporativa";
+            document.getElementById('p1-pain').innerText = "Portafolios de proyectos ciegos, reportes manuales en Excel que llegan tarde o con errores, y un directorio tomando decisiones basadas en la intuición de sus gerentes, no en datos reales.";
+            document.getElementById('p1-sol').innerText = "Diseñamos y estructuramos sistemas de control automatizados mediante modelos analíticos locales en Power BI Desktop. Entregamos tableros consolidados en formato ejecutable .pbix listos para la toma de decisiones en el directorio. Control total y confidencial, procesado internamente sin exponer su estrategia en la red.";
+            document.getElementById('b2').innerText = "RIEL 2 — INFRAESTRUCTURA FORENSE";
+            document.getElementById('t2').innerText = "Saneamiento Analítico de Datos y Pipelines ETL Forenses";
+            document.getElementById('p2-pain').innerText = "Bases de datos de clientes, inventarios o activos corruptas y registros duplicados que inflan artificialmente las cuentas. Datos deficientes que no sirven como prueba legal válida ante una auditoría fiscal o un litigio porque no preservan su integridad.";
+            document.getElementById('p2-sol').innerText = "Minería y depuración forense masiva ejecutada mediante algoritmos en Python y motores de Fuzzy Matching con un 96.97% de confianza lógica. Reestructuramos la información en entornos aislados, garantizando la preservación absoluta de la cadena de custodia procesal.";
+            document.getElementById('b3').innerText = "RIEL 3 — AUDITORÍA DE SLAs Y RECUPERACIÓN DE CAPITAL";
+            document.getElementById('t3').innerText = "Minería Forense de Incidencias y Ejecución de Cláusulas Contractuales";
+            document.getElementById('p3-pain').innerText = "Contratos con proveedores logísticos, de software o de infraestructura que incluyen penalizaciones por fallas de servicio (SLAs) que nunca se ejecutan. Pérdidas millonarias silenciosas porque nadie audita de forma matemática las métricas que entrega el proveedor.";
+            document.getElementById('p3-sol').innerText = "Analizamos matemáticamente sus registros crudos de incidencias, bases de datos transaccionales y logs de sistemas. Correlacionamos métricas estructurales clave (TTG, TTC, TTL) con las cláusulas contractuales. Demostramos técnicamente el incumplimiento, cuantificamos el impacto financiero exacto y estructuramos la acción legal para recuperar el capital. Este mismo método fue aplicado por nuestro fundador para posicionar el rendimiento operativo de redes de telecomunicaciones en los primeros lugares nacionales.";
+            document.getElementById('b4').innerText = "RIEL 4 — REGULACIÓN Y CUMPLIMIENTO";
+            document.getElementById('t4').innerText = "Blindaje Contractual Avanzado y LegalTech Aplicado";
+            document.getElementById('p4-pain').innerText = "Firmar contratos de adquisición tecnológica o infraestructura crítica confiando a ciegas en la palabra del proveedor. Vacíos en la letra pequeña técnica que exponen a la empresa a multas regulatorias o parálisis operativas catastróficas cuando surge un conflicto.";
+            document.getElementById('p4-sol').innerText = "Auditoría técnica avanzada aplicada al diseño de contratos de procura corporativa nacional e internacional. Aseguramos el cumplimiento normativo blindando la documentación jurídica desde la raíz, porque entendemos a la perfección el código del software y la ingeniería del hardware que su organización está adquiriendo.";
+            document.getElementById('a-title').innerText = "35 años uniendo la lógica de los datos y el rigor de la ley.";
+            document.getElementById('a-p1').innerText = "En el mercado corporativo actual, los ingenieros despliegan arquitecturas de datos pero ignoran los riesgos regulatorios. Los abogados, por su parte, redactan contratos de tecnología pero no saben leer una sola línea de código. VERUMLEX rompe esa brecha.";
+            document.getElementById('a-p2').innerText = "La firma está fundada y operada directamente por Simón Molleda Yoris, un perfil atípico en América Latina con más de tres décadas de experiencia en la ingeniería de operaciones críticas, ciberseguridad en redes redundantes de fibra óptica y analítica de datos (desde 1990), consolidado formalmente como Abogado de la República (desde 2016).";
+            document.getElementById('a-p3').innerText = "Esta combinación exacta permite el desarrollo de scripts automatizados en Python y procesamiento de lenguaje natural (NLP) que han reducido hasta en un 70% el tiempo de análisis de expedientes legales complejos en proyectos previos, o auditar infraestructuras para erradicar brechas lógicas. No subcontratamos firmas externas ni delegamos el criterio; un solo operador domina la ingeniería y el derecho de punta a punta.";
+            document.getElementById('a-sig').innerText = "Simón Molleda Yoris — Fundador y Socio Director";
+            document.getElementById('cta-title').innerText = "Diagnóstico Técnico-Legal Inicial";
+            document.getElementById('cta-desc').innerText = "El diagnóstico inicial se ofrece sin costo porque es nuestra forma de calificar el encaje mutuo. No trabajamos con cualquier cliente. Evaluamos si existe una brecha real, y el cliente evalúa si nuestro enfoque encaja con su operación. Si hay encaje, presentamos propuesta. Si no, se lo decimos con claridad.";
+            document.getElementById('cta-nda-text').innerHTML = "🔒 <strong>Con NDA Firmado Previamente:</strong> Este diagnóstico se realiza estrictamente bajo un entorno blindado de secreto profesional. Firmamos y formalizamos un Acuerdo de Confidencialidad (NDA) vinculante antes de que usted comparta una sola línea de registros, contratos o sistemas.";
+            document.getElementById('cta-btn').innerText = "Solicitar Diagnóstico Inicial";
+            document.getElementById('faq-title').innerText = "Preguntas Frecuentes";
+            document.getElementById('faq-q1').innerText = "¿Qué es exactamente lo que hace única a VERUMLEX?";
+            document.getElementById('faq-a1').innerText = "Resolvemos problemas complejos atacándolos desde dos frentes simultáneos. Si su empresa tiene una fuga de dinero, una consultora de software solo detectará la falla técnica. Nosotros corregimos el error en los sistemas y, al mismo tiempo, estructuramos la reclamación legal basada en el contrato para obligar al proveedor a resarcir el daño o indemnizar a la organización.";
+            document.getElementById('faq-q2').innerText = "¿Cómo garantizan el procesamiento 100% offline de la IA?";
+            document.getElementById('faq-a2').innerText = "No dependemos de nubes comerciales ni enviamos información a APIs externas. Todo nuestro entorno analítico —incluyendo modelos de lenguaje avanzados (LLMs), bases de datos vectoriales y pipelines de Python— se ejecuta en infraestructura propia estrictamente aislada (air-gapped), sin conexión a internet. Su información se analiza bajo protocolos estrictos de custodia analítica y secrecía profesional, eliminando cualquier vector de transferencia o exposición en la red.";
+            document.getElementById('faq-q3').innerText = "¿Por qué el diagnóstico inicial es sin costo?";
+            document.getElementById('faq-a3').innerText = "El diagnóstico se ofrece sin costo porque es nuestra forma de calificar el encaje mutuo. No trabajamos con cualquier cliente. Evaluamos si existe una brecha real, y el cliente evalúa si nuestro enfoque encaja con su operación. Si hay encaje, presentamos propuesta. Si no, se lo decimos con claridad.";
+            document.getElementById('faq-q4').innerText = "¿Cómo es el esquema de contratación?";
+            document.getElementById('faq-a4').innerText = "Trabajamos exclusivamente por hitos entregados o proyectos cerrados bajo presupuesto transparente. Sin mensualidades obligatorias ni dependencias operativas. Todo el valor generado (código, tableros analíticos y estructuras contractuales) pasa a ser propiedad absoluta de su empresa.";
+            document.getElementById('c-title').innerText = "Canales de Comunicación";
+            document.getElementById('c-b1').innerText = "CANAL GENERAL";
+            document.getElementById('c-t1').innerText = "📩 Operaciones B2B";
+            document.getElementById('c-p1').innerText = "Para solicitudes de diagnóstico, auditorías o consultas generales.";
+            document.getElementById('c-b2').innerText = "ENLACE EJECUTIVO";
+            document.getElementById('c-t2').innerText = "💼 Enlace Ejecutivo";
+            document.getElementById('c-p2').innerText = "Contacto directo y confidencial para proyectos estratégicos y evaluación técnica inicial.";
+            document.getElementById('f-legal').innerText = "Ingeniería Forense y Blindaje Jurídico";
         }
 
         function withEn() {
             resetActive('b-en');
-            document.getElementById('h-title').innerText = "Forensic Audit, Operational Risk, Data Governance, LegalTech & AI Automation";
-            document.getElementById('h-desc').innerText = "VERUMLEX TECHNOLOGIES integrates advanced data analytics, national and international regulatory compliance, deep engineering in technology and telecommunications infrastructure, and AI automation for regulated operations. We deliver high-tier transnational B2B corporate solutions through a strictly offline and secured local processing framework.";
-            document.getElementById('m1').innerText = "OFFLINE PROCESSING"; document.getElementById('m2').innerText = "DATA LEAK RISK"; document.getElementById('m3').innerText = "SLA AUDIT ASSURANCE";
-            document.getElementById('h-ov').innerText = "CORE INFRASTRUCTURE: THE LOGISTICAL FUSION OF DATA, LAW & NETWORKS";
+            document.getElementById('h-title').innerText = "Forensic Engineering and Legal Shielding for Organizations with Complex Operations. Without Your Data Ever Depending on the Cloud.";
+            document.getElementById('h-desc').innerText = "We cleanse massive databases, audit operational deviations, and shield the execution of critical contractual agreements. Advanced 100% offline processing through local AI models and automated pipelines, designed for corporations that demand absolute control, risk mitigation, and total confidentiality.";
+            document.getElementById('m1').innerText = "OFFLINE";
+            document.getElementById('m2').innerText = "EXPOSURE POINTS";
+            document.getElementById('m3').innerText = "CONTRACTUAL AUDIT";
+            document.getElementById('h-ov').innerText = "LOCAL PROCESSING. CHAIN OF CUSTODY. LEGAL GUARANTEE.";
+            document.getElementById('q-title').innerText = "Three critical questions that every board of directors should be able to answer with complete certainty:";
+            document.getElementById('q1').innerText = "How much money did your organization lose last year due to breaches by critical suppliers that nobody technically audited?";
+            document.getElementById('q2').innerText = "Are you absolutely certain that your master databases do not contain massive errors that distort your financial or tax statements?";
+            document.getElementById('q3').innerText = "Could you demonstrate before a court or external regulator the complete chain of custody of your transactional data?";
+            document.getElementById('q-close').innerText = "If you cannot answer with exact data, your company has an active operational and legal gap.";
             document.getElementById('s-head').innerText = "Corporate Engineering Units";
-            document.getElementById('b1').innerText = "TRACK 1 — DATA OPERATIONS"; document.getElementById('t1').innerText = "📊 PMO Tech & Management Control"; document.getElementById('p1').innerText = "Design, structuring, and automated control of technological portfolios through local analytical models in Power BI Desktop. Delivery and analytical integration of corporate data architecture via strictly and cleanly structured deliverables in .pbix format.";
-            document.getElementById('b2').innerText = "TRACK 2 — FORENSIC INFRASTRUCTURE"; document.getElementById('t2').innerText = "🧬 Analytical Cleansing & ETL Pipelines"; document.getElementById('p2').innerText = "Data mining, forensic deep-cleaning, and massive de-duplication of commercial databases and corrupted inventories. Optimized local processing driven by synchronous fragmentation algorithms within isolated environments, fully guaranteeing data chain of custody preservation.";
-            document.getElementById('b3').innerText = "TRACK 3 — SLA AUDITING & CAPITAL RECOVERY"; document.getElementById('t3').innerText = "📡 SLA Auditing & Capital Recovery"; document.getElementById('p3').innerText = "Mathematical analysis and forensic data mining applied to raw network fault and outage logs across wireless and fiber infrastructure. Algorithmic processing and correlation of structural metrics—TTG (Time to Grant), TTC (Time to Clear), and TTL (Time to Log)—to pinpoint operational deviations and legally enforce Service Level Agreements for global carriers.";
-            document.getElementById('b4').innerText = "TRACK 4 — REGULATION & COMPLIANCE"; document.getElementById('t4').innerText = "⚖️ Contractual Shielding & LegalTech"; document.getElementById('p4').innerText = "Advanced technical auditing and contractual framework design tailored for transnational corporate procurement workflows. Operational risk mitigation and absolute alignment with national and international regulatory compliance standards for critical infrastructure deployment and governance.";
-            document.getElementById('cta-title').innerText = "Request an initial diagnosis";
-            document.getElementById('cta-desc').innerText = "We analyze your case, evaluate the scope, and propose a technical roadmap. No commitment.";
-            document.getElementById('cta-btn').innerText = "Request diagnosis";
-            document.getElementById('c-title').innerText = "Secure Communication Channels";
-            document.getElementById('c-b1').innerText = "GENERAL INQUIRIES"; document.getElementById('c-t1').innerText = "📩 B2B Operations"; document.getElementById('c-p1').innerText = "For analytics diagnostic requests, network audits, or batch forensic data cleansing.";
-            document.getElementById('c-b2').innerText = "EXECUTIVE LIAISON"; document.getElementById('c-t2').innerText = "💼 Executive Liaison"; document.getElementById('c-p2').innerText = "Direct and confidential contact for tech portfolio governance and Service Level Agreements (SLA).";
-            document.getElementById('f-legal').innerText = "Protected Data Infrastructure Jurisdiction";
+            document.getElementById('b1').innerText = "TRACK 1 — DATA OPERATIONS";
+            document.getElementById('t1').innerText = "PMO Tech, Management Control and Corporate Governance";
+            document.getElementById('p1-pain').innerText = "Blind project portfolios, manual Excel reports that arrive late or with errors, and a board making decisions based on the intuition of its managers, not on real data.";
+            document.getElementById('p1-sol').innerText = "We design and structure automated control systems using local analytical models in Power BI Desktop. We deliver consolidated dashboards in executable .pbix format ready for board-level decision-making. Total and confidential control, processed internally without exposing your strategy to the network.";
+            document.getElementById('b2').innerText = "TRACK 2 — FORENSIC INFRASTRUCTURE";
+            document.getElementById('t2').innerText = "Analytical Data Cleansing and Forensic ETL Pipelines";
+            document.getElementById('p2-pain').innerText = "Corrupted customer, inventory, or asset databases and duplicate records that artificially inflate accounts. Deficient data that does not serve as valid legal evidence in a tax audit or litigation because it does not preserve its integrity.";
+            document.getElementById('p2-sol').innerText = "Massive forensic mining and cleansing executed through Python algorithms and Fuzzy Matching engines with 96.97% logical confidence. We restructure the information in isolated environments, guaranteeing absolute preservation of the procedural chain of custody.";
+            document.getElementById('b3').innerText = "TRACK 3 — SLA AUDITING AND CAPITAL RECOVERY";
+            document.getElementById('t3').innerText = "Forensic Incident Mining and Contractual Clause Enforcement";
+            document.getElementById('p3-pain').innerText = "Contracts with logistics, software, or infrastructure suppliers that include penalties for service failures (SLAs) that are never enforced. Silent million-dollar losses because nobody mathematically audits the metrics the supplier delivers.";
+            document.getElementById('p3-sol').innerText = "We mathematically analyze your raw incident records, transactional databases, and system logs. We correlate key structural metrics (TTG, TTC, TTL) with contractual clauses. We technically demonstrate the breach, quantify the exact financial impact, and structure the legal action to recover the capital. This same method was applied by our founder to position the operational performance of telecommunications networks in the top national rankings.";
+            document.getElementById('b4').innerText = "TRACK 4 — REGULATION AND COMPLIANCE";
+            document.getElementById('t4').innerText = "Advanced Contractual Shielding and Applied LegalTech";
+            document.getElementById('p4-pain').innerText = "Signing technology or critical infrastructure acquisition contracts relying blindly on the supplier's word. Gaps in the technical fine print that expose the company to regulatory fines or catastrophic operational paralysis when a conflict arises.";
+            document.getElementById('p4-sol').innerText = "Advanced technical auditing applied to the design of national and international corporate procurement contracts. We ensure regulatory compliance by shielding legal documentation from the root, because we fully understand the code of the software and the engineering of the hardware your organization is acquiring.";
+            document.getElementById('a-title').innerText = "35 years uniting the logic of data with the rigor of law.";
+            document.getElementById('a-p1').innerText = "In today's corporate market, engineers deploy data architectures but ignore regulatory risks. Lawyers, on the other hand, draft technology contracts but cannot read a single line of code. VERUMLEX bridges that gap.";
+            document.getElementById('a-p2').innerText = "The firm is founded and operated directly by Simón Molleda Yoris, an atypical profile in Latin America with more than three decades of experience in critical operations engineering, cybersecurity in redundant fiber optic networks, and data analytics (since 1990), formally consolidated as a Lawyer of the Republic (since 2016).";
+            document.getElementById('a-p3').innerText = "This exact combination enables the development of automated Python scripts and natural language processing (NLP) that have reduced by up to 70% the analysis time of complex legal files in previous projects, or audit infrastructures to eradicate logical breaches. We do not subcontract external firms or delegate judgment; a single operator masters both engineering and law end-to-end.";
+            document.getElementById('a-sig').innerText = "Simón Molleda Yoris — Founder and Managing Partner";
+            document.getElementById('cta-title').innerText = "Initial Technical-Legal Diagnosis";
+            document.getElementById('cta-desc').innerText = "The initial diagnosis is offered free of charge because it is our way of qualifying mutual fit. We do not work with just any client. We assess whether a real gap exists, and the client assesses whether our approach fits their operation. If there is a fit, we present a proposal. If not, we tell them clearly.";
+            document.getElementById('cta-nda-text').innerHTML = "🔒 <strong>With NDA Signed Beforehand:</strong> This diagnosis is conducted strictly under a shielded environment of professional secrecy. We sign and formalize a binding Non-Disclosure Agreement (NDA) before you share a single line of records, contracts, or systems.";
+            document.getElementById('cta-btn').innerText = "Request Initial Diagnosis";
+            document.getElementById('faq-title').innerText = "Frequently Asked Questions";
+            document.getElementById('faq-q1').innerText = "What exactly makes VERUMLEX unique?";
+            document.getElementById('faq-a1').innerText = "We solve complex problems by attacking them from two fronts simultaneously. If your company has a money leak, a software consultancy will only detect the technical failure. We fix the error in the systems and, at the same time, structure the legal claim based on the contract to force the supplier to compensate the damage or indemnify the organization.";
+            document.getElementById('faq-q2').innerText = "How do you guarantee 100% offline AI processing?";
+            document.getElementById('faq-a2').innerText = "We do not depend on commercial clouds nor do we send information to external APIs. Our entire analytical environment —including advanced language models (LLMs), vector databases, and Python pipelines— runs on our own strictly isolated infrastructure (air-gapped), without internet connection. Your information is analyzed under strict protocols of analytical custody and professional secrecy, eliminating any vector of transfer or exposure on the network.";
+            document.getElementById('faq-q3').innerText = "Why is the initial diagnosis free of charge?";
+            document.getElementById('faq-a3').innerText = "The diagnosis is offered free of charge because it is our way of qualifying mutual fit. We do not work with just any client. We assess whether a real gap exists, and the client assesses whether our approach fits their operation. If there is a fit, we present a proposal. If not, we tell them clearly.";
+            document.getElementById('faq-q4').innerText = "What is the contracting scheme?";
+            document.getElementById('faq-a4').innerText = "We work exclusively by delivered milestones or closed projects under a transparent budget. No mandatory monthly fees or operational dependencies. All generated value (code, analytical dashboards, and contractual structures) becomes the absolute property of your company.";
+            document.getElementById('c-title').innerText = "Communication Channels";
+            document.getElementById('c-b1').innerText = "GENERAL CHANNEL";
+            document.getElementById('c-t1').innerText = "📩 B2B Operations";
+            document.getElementById('c-p1').innerText = "For diagnosis requests, audits, or general inquiries.";
+            document.getElementById('c-b2').innerText = "EXECUTIVE LIAISON";
+            document.getElementById('c-t2').innerText = "💼 Executive Liaison";
+            document.getElementById('c-p2').innerText = "Direct and confidential contact for strategic projects and initial technical evaluation.";
+            document.getElementById('f-legal').innerText = "Forensic Engineering and Legal Shielding";
         }
 
         function withPt() {
             resetActive('b-pt');
-            document.getElementById('h-title').innerText = "Auditoria Forense, Risco Operacional, Governança de Dados, LegalTech e Automação com IA";
-            document.getElementById('h-desc').innerText = "A VERUMLEX TECHNOLOGIES integra análise avançada de dados, cumprimento normativo nacional e internacional, engenharia profunda em infraestrutura de tecnologia e telecomunicações, e automação com IA para operações reguladas. Oferecemos soluções corporativas B2B transnacionais por meio de processamento local estritamente offline e protegido.";
-            document.getElementById('m1').innerText = "PROCESSAMENTO OFFLINE"; document.getElementById('m2').innerText = "RISCO DE VAZAMENTO"; document.getElementById('m3').innerText = "AUDITORIA DE REDE";
-            document.getElementById('h-ov').innerText = "CORE INFRASTRUCTURE: A FUSÃO LOGÍSTICA DE DADOS, LEIS E REDES";
+            document.getElementById('h-title').innerText = "Engenharia Forense e Blindagem Jurídica para organizações com operações complexas. Sem que seus dados dependam jamais da nuvem.";
+            document.getElementById('h-desc').innerText = "Sanamos bases de dados massivas, auditamos desvios operacionais e blindamos a execução de acordos contratuais críticos. Processamento avançado 100% offline por meio de modelos locais de IA e pipelines automatizados, projetado para corporações que exigem controle absoluto, mitigação de riscos e confidencialidade total.";
+            document.getElementById('m1').innerText = "OFFLINE";
+            document.getElementById('m2').innerText = "PONTOS DE EXPOSIÇÃO";
+            document.getElementById('m3').innerText = "AUDITORIA CONTRATUAL";
+            document.getElementById('h-ov').innerText = "PROCESSAMENTO LOCAL. CADEIA DE CUSTÓDIA. GARANTIA LEGAL.";
+            document.getElementById('q-title').innerText = "Três perguntas críticas que toda diretoria deveria poder responder com total segurança:";
+            document.getElementById('q1').innerText = "Quanto dinheiro sua organização perdeu no último ano por descumprimentos de fornecedores críticos que ninguém auditou tecnicamente?";
+            document.getElementById('q2').innerText = "Você tem certeza absoluta de que seus bancos de dados mestres não contêm erros massivos que distorçam suas demonstrações financeiras ou fiscais?";
+            document.getElementById('q3').innerText = "Você poderia demonstrar perante um tribunal ou regulador externo a cadeia de custódia íntegra dos seus dados transacionais?";
+            document.getElementById('q-close').innerText = "Se você não pode responder com dados exatos, sua empresa tem uma brecha operacional e legal ativa.";
             document.getElementById('s-head').innerText = "Unidades de Engenharia Corporativa";
-            document.getElementById('b1').innerText = "TRILHA 1 — DATA OPERATIONS"; document.getElementById('t1').innerText = "📊 PMO Tech & Controle de Gestão"; document.getElementById('p1').innerText = "Design, estruturação e controle automatizado de portfólios tecnológicos por meio de modelos analíticos locais no Power BI Desktop. Despacho e integração analítica de arquitetura de dados corporativos através de entregas estrita e limpadamente estruturadas no formato .pbix.";
-            document.getElementById('b2').innerText = "TRILHA 2 — INFRAESTRUTURA FORENSE"; document.getElementById('t2').innerText = "🧬 Saneamento Analítico & Pipelines ETL"; document.getElementById('p2').innerText = "Mineração de dados, depuração forense e desduplicação massiva de bancos de dados comerciais e inventários corrompidos. Processamento local optimizado por meio de algoritmos de fragmentação síncrona em ambientes isolados, garantindo a preservação absoluta da cadeia de custódia das informações.";
-            document.getElementById('b3').innerText = "TRILHA 3 — AUDITORIA DE SLAs E RECUPERAÇÃO DE CAPITAL"; document.getElementById('t3').innerText = "📡 Auditoria de SLAs & Recuperação de Capital"; document.getElementById('p3').innerText = "Análise matemática e mineração forense de dados aplicada a logs brutos de falhas de rede em infraestrutura móvel e de fibra óptica. Processamento e correlação algorítmica de métricas estruturais (TTG, TTC, TTL) para identificar desvios operacionais e fazer cumprir legalmente os SLAs perante operadoras globais.";
-            document.getElementById('b4').innerText = "TRILHA 4 — REGULAÇÃO & COMPLIANCE"; document.getElementById('t4').innerText = "⚖️ Blindagem Contratual e LegalTech"; document.getElementById('p4').innerText = "Auditoria técnica avançada e design de estrutura contratual adaptada aos fluxos de compras corporativas transnacionais. Mitigação de riscos operacionais e alinhamento com padrões nacionais e internacionais de conformidade para governança de infraestrutura crítica.";
-            document.getElementById('cta-title').innerText = "Solicite um diagnóstico inicial";
-            document.getElementById('cta-desc').innerText = "Analisamos o seu caso, avaliamos o escopo e propomos um roteiro técnico. Sem compromisso.";
-            document.getElementById('cta-btn').innerText = "Solicitar diagnóstico";
-            document.getElementById('c-title').innerText = "Canais de Comunicação Segura";
-            document.getElementById('c-b1').innerText = "CANAL GERAL"; document.getElementById('c-t1').innerText = "📩 Operações B2B"; document.getElementById('c-p1').innerText = "Para solicitações de diagnóstico analítico, auditorias de rede ou saneamento forense de dados em lote.";
-            document.getElementById('c-b2').innerText = "LIGAÇÃO EXECUTIVA"; document.getElementById('c-t2').innerText = "💼 Ligação Executiva"; document.getElementById('c-p2').innerText = "Contato direto e confidencial para governança de portfólio de tecnologia e Acordos de Nível de Serviço (SLA).";
-            document.getElementById('f-legal').innerText = "Jurisdição de Infraestrutura de Dados Protegida";
+            document.getElementById('b1').innerText = "TRILHA 1 — DATA OPERATIONS";
+            document.getElementById('t1').innerText = "PMO Tech, Controle de Gestão e Governança Corporativa";
+            document.getElementById('p1-pain').innerText = "Portfólios de projetos cegos, relatórios manuais em Excel que chegam tarde ou com erros, e uma diretoria tomando decisões baseadas na intuição de seus gerentes, não em dados reais.";
+            document.getElementById('p1-sol').innerText = "Projetamos e estruturamos sistemas de controle automatizados por meio de modelos analíticos locais no Power BI Desktop. Entregamos painéis consolidados em formato executável .pbix prontos para a tomada de decisões na diretoria. Controle total e confidencial, processado internamente sem expor sua estratégia na rede.";
+            document.getElementById('b2').innerText = "TRILHA 2 — INFRAESTRUTURA FORENSE";
+            document.getElementById('t2').innerText = "Saneamento Analítico de Dados e Pipelines ETL Forenses";
+            document.getElementById('p2-pain').innerText = "Bases de dados de clientes, inventários ou ativos corrompidas e registros duplicados que inflam artificialmente as contas. Dados deficientes que não servem como prova legal válida em uma auditoria fiscal ou litígio porque não preservam sua integridade.";
+            document.getElementById('p2-sol').innerText = "Mineração e depuração forense massiva executada por meio de algoritmos em Python e motores de Fuzzy Matching com 96,97% de confiança lógica. Reestruturamos a informação em ambientes isolados, garantindo a preservação absoluta da cadeia de custódia processual.";
+            document.getElementById('b3').innerText = "TRILHA 3 — AUDITORIA DE SLAs E RECUPERAÇÃO DE CAPITAL";
+            document.getElementById('t3').innerText = "Mineração Forense de Incidentes e Execução de Cláusulas Contratuais";
+            document.getElementById('p3-pain').innerText = "Contratos com fornecedores logísticos, de software ou de infraestrutura que incluem penalidades por falhas de serviço (SLAs) que nunca são executadas. Perdas milionárias silenciosas porque ninguém audita de forma matemática as métricas que o fornecedor entrega.";
+            document.getElementById('p3-sol').innerText = "Analisamos matematicamente seus registros brutos de incidentes, bancos de dados transacionais e logs de sistemas. Correlacionamos métricas estruturais-chave (TTG, TTC, TTL) com as cláusulas contratuais. Demonstramos tecnicamente o descumprimento, quantificamos o impacto financeiro exato e estruturamos a ação legal para recuperar o capital. Este mesmo método foi aplicado por nosso fundador para posicionar o desempenho operacional de redes de telecomunicações nos primeiros lugares nacionais.";
+            document.getElementById('b4').innerText = "TRILHA 4 — REGULAÇÃO E CONFORMIDADE";
+            document.getElementById('t4').innerText = "Blindagem Contratual Avançada e LegalTech Aplicado";
+            document.getElementById('p4-pain').innerText = "Assinar contratos de aquisição tecnológica ou infraestrutura crítica confiando cegamente na palavra do fornecedor. Lacunas na letra miúda técnica que expõem a empresa a multas regulatórias ou paralisias operacionais catastróficas quando surge um conflito.";
+            document.getElementById('p4-sol').innerText = "Auditoria técnica avançada aplicada ao design de contratos de compras corporativas nacionais e internacionais. Garantimos a conformidade regulatória blindando a documentação jurídica desde a raiz, porque entendemos perfeitamente o código do software e a engenharia do hardware que sua organização está adquirindo.";
+            document.getElementById('a-title').innerText = "35 anos unindo a lógica dos dados e o rigor da lei.";
+            document.getElementById('a-p1').innerText = "No mercado corporativo atual, os engenheiros implantam arquiteturas de dados, mas ignoram os riscos regulatórios. Os advogados, por sua vez, redigem contratos de tecnologia, mas não sabem ler uma única linha de código. A VERUMLEX rompe essa lacuna.";
+            document.getElementById('a-p2').innerText = "A firma é fundada e operada diretamente por Simón Molleda Yoris, um perfil atípico na América Latina com mais de três décadas de experiência em engenharia de operações críticas, cibersegurança em redes redundantes de fibra óptica e análise de dados (desde 1990), formalmente consolidado como Advogado da República (desde 2016).";
+            document.getElementById('a-p3').innerText = "Esta combinação exata permite o desenvolvimento de scripts automatizados em Python e processamento de linguagem natural (NLP) que reduziram em até 70% o tempo de análise de processos legais complexos em projetos anteriores, ou auditar infraestruturas para erradicar brechas lógicas. Não subcontratamos firmas externas nem delegamos o critério; um único operador domina a engenharia e o direito de ponta a ponta.";
+            document.getElementById('a-sig').innerText = "Simón Molleda Yoris — Fundador e Sócio-Diretor";
+            document.getElementById('cta-title').innerText = "Diagnóstico Técnico-Legal Inicial";
+            document.getElementById('cta-desc').innerText = "O diagnóstico inicial é oferecido sem custo porque é a nossa forma de qualificar o encaixe mútuo. Não trabalhamos com qualquer cliente. Avaliamos se existe uma brecha real, e o cliente avalia se a nossa abordagem se encaixa na sua operação. Se houver encaixe, apresentamos proposta. Se não, dizemos com clareza.";
+            document.getElementById('cta-nda-text').innerHTML = "🔒 <strong>Com NDA Assinado Previamente:</strong> Este diagnóstico é realizado estritamente sob um ambiente blindado de sigilo profissional. Assinamos e formalizamos um Acordo de Confidencialidade (NDA) vinculante antes que você compartilhe uma única linha de registros, contratos ou sistemas.";
+            document.getElementById('cta-btn').innerText = "Solicitar Diagnóstico Inicial";
+            document.getElementById('faq-title').innerText = "Perguntas Frequentes";
+            document.getElementById('faq-q1').innerText = "O que exatamente torna a VERUMLEX única?";
+            document.getElementById('faq-a1').innerText = "Resolvemos problemas complexos atacando-os de duas frentes simultâneas. Se sua empresa tem um vazamento de dinheiro, uma consultoria de software apenas detectará a falha técnica. Nós corrigimos o erro nos sistemas e, ao mesmo tempo, estruturamos a reivindicação legal baseada no contrato para obrigar o fornecedor a ressarcir o dano ou indenizar a organização.";
+            document.getElementById('faq-q2').innerText = "Como vocês garantem o processamento 100% offline da IA?";
+            document.getElementById('faq-a2').innerText = "Não dependemos de nuvens comerciais nem enviamos informações para APIs externas. Todo o nosso ambiente analítico —incluindo modelos de linguagem avançados (LLMs), bancos de dados vetoriais e pipelines Python— é executado em infraestrutura própria estritamente isolada (air-gapped), sem conexão à internet. Sua informação é analisada sob protocolos rigorosos de custódia analítica e sigilo profissional, eliminando qualquer vetor de transferência ou exposição na rede.";
+            document.getElementById('faq-q3').innerText = "Por que o diagnóstico inicial é sem custo?";
+            document.getElementById('faq-a3').innerText = "O diagnóstico é oferecido sem custo porque é a nossa forma de qualificar o encaixe mútuo. Não trabalhamos com qualquer cliente. Avaliamos se existe uma brecha real, e o cliente avalia se a nossa abordagem se encaixa na sua operação. Se houver encaixe, apresentamos proposta. Se não, dizemos com clareza.";
+            document.getElementById('faq-q4').innerText = "Como é o esquema de contratação?";
+            document.getElementById('faq-a4').innerText = "Trabalhamos exclusivamente por marcos entregues ou projetos fechados sob orçamento transparente. Sem mensalidades obrigatórias ou dependências operacionais. Todo o valor gerado (código, painéis analíticos e estruturas contratuais) torna-se propriedade absoluta de sua empresa.";
+            document.getElementById('c-title').innerText = "Canais de Comunicação";
+            document.getElementById('c-b1').innerText = "CANAL GERAL";
+            document.getElementById('c-t1').innerText = "📩 Operações B2B";
+            document.getElementById('c-p1').innerText = "Para solicitações de diagnóstico, auditorias ou consultas gerais.";
+            document.getElementById('c-b2').innerText = "LIGAÇÃO EXECUTIVA";
+            document.getElementById('c-t2').innerText = "💼 Ligação Executiva";
+            document.getElementById('c-p2').innerText = "Contato direto e confidencial para projetos estratégicos e avaliação técnica inicial.";
+            document.getElementById('f-legal').innerText = "Engenharia Forense e Blindagem Jurídica";
         }
+
+        // Inicializar en español al cargar
+        withEs();
     </script>
 </body>
 </html>
